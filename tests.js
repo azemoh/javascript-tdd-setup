@@ -53,10 +53,10 @@ describe("Notes Application can get specific Notes", function () {
 
   it("return correct note", function () {
     noteApp.addNote(note);
-    assert(noteApp.get(1) === note);
+    assert(noteApp.get(1).content === "Hello world");
   });
 
-  it("return null if id does not exit", function () {
+  it("return not found if id does not exit", function () {
     assert(noteApp.get(5) === "Note with ID: " + 5 + " not found.");
   });
 });
